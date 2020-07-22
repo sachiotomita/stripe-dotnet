@@ -2,7 +2,6 @@ namespace Stripe
 {
     using System.Collections.Generic;
     using Newtonsoft.Json;
-    using Stripe.Infrastructure;
 
     public class CustomerUpdateOptions : BaseOptions, IHasMetadata
     {
@@ -49,8 +48,7 @@ namespace Stripe
         public ShippingOptions Shipping { get; set; }
 
         [JsonProperty("source")]
-        [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<string, CardCreateNestedOptions> Source { get; set; }
+        public string Source { get; set; }
 
         [JsonProperty("tax_exempt")]
         public string TaxExempt { get; set; }

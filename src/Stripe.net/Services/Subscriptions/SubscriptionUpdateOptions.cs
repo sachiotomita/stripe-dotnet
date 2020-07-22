@@ -14,7 +14,7 @@ namespace Stripe
         public decimal? ApplicationFeePercent { get; set; }
 
         [JsonProperty("billing_cycle_anchor")]
-        public SubscriptionBillingCycleAnchor BillingCycleAnchor { get; set; }
+        public string BillingCycleAnchor { get; set; }
 
         [JsonProperty("billing_thresholds")]
         public SubscriptionBillingThresholdsOptions BillingThresholds { get; set; }

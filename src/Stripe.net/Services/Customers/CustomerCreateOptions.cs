@@ -56,8 +56,7 @@ namespace Stripe
         public ShippingOptions Shipping { get; set; }
 
         [JsonProperty("source")]
-        [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<string, CardCreateNestedOptions> Source { get; set; }
+        public string Source { get; set; }
 
         [JsonProperty("tax_exempt")]
         public string TaxExempt { get; set; }
@@ -67,7 +66,7 @@ namespace Stripe
 
         [JsonProperty("trial_end")]
         [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<DateTime?, SubscriptionTrialEnd> TrialEnd { get; set; }
+        public AnyOf<DateTime?, CustomerTrialEnd> TrialEnd { get; set; }
 
         [JsonProperty("validate")]
         public bool? Validate { get; set; }

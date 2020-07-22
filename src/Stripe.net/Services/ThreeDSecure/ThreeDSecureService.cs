@@ -1,10 +1,8 @@
 namespace Stripe
 {
-    using System;
     using System.Threading;
     using System.Threading.Tasks;
 
-    [Obsolete("Use the SourceService instead.")]
     public class ThreeDSecureService : Service<ThreeDSecure>,
         ICreatable<ThreeDSecure, ThreeDSecureCreateOptions>,
         IRetrievable<ThreeDSecure, ThreeDSecureGetOptions>

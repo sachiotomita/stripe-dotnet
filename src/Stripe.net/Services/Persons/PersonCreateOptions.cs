@@ -1,14 +1,12 @@
 namespace Stripe
 {
-    using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
-    using Stripe.Infrastructure;
 
     public class PersonCreateOptions : BaseOptions, IHasMetadata
     {
         [JsonProperty("address")]
-        public AddressOptions Address { get; set; }
+        public PersonAddressOptions Address { get; set; }
 
         [JsonProperty("address_kana")]
         public AddressJapanOptions AddressKana { get; set; }
@@ -65,8 +63,7 @@ namespace Stripe
         public PersonRelationshipOptions Relationship { get; set; }
 
         [JsonProperty("ssn_last_4")]
-        [AllowNameMismatch]
-        public string SSNLast4 { get; set; }
+        public string SsnLast4 { get; set; }
 
         [JsonProperty("verification")]
         public PersonVerificationOptions Verification { get; set; }

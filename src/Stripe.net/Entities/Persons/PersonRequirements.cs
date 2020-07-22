@@ -9,7 +9,7 @@ namespace Stripe
         public List<string> CurrentlyDue { get; set; }
 
         [JsonProperty("errors")]
-        public List<AccountRequirementsError> Errors { get; set; }
+        public List<PersonRequirementsError> Errors { get; set; }
 
         [JsonProperty("eventually_due")]
         public List<string> EventuallyDue { get; set; }

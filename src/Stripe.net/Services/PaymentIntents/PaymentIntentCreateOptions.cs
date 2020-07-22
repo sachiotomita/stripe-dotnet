@@ -72,7 +72,7 @@ namespace Stripe
         public string SetupFutureUsage { get; set; }
 
         [JsonProperty("shipping")]
-        public ChargeShippingOptions Shipping { get; set; }
+        public ShippingOptions Shipping { get; set; }
 
         [JsonProperty("source")]
         public string Source { get; set; }

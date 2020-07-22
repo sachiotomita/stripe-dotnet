@@ -23,13 +23,11 @@ namespace Stripe
 
         public virtual File Create(FileCreateOptions options, RequestOptions requestOptions = null)
         {
-            requestOptions = this.SetupRequestOptionsForFilesRequest(requestOptions);
             return this.CreateEntity(options, requestOptions);
         }
 
         public virtual Task<File> CreateAsync(FileCreateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
         {
-            requestOptions = this.SetupRequestOptionsForFilesRequest(requestOptions);
             return this.CreateEntityAsync(options, requestOptions, cancellationToken);
         }
 
@@ -61,21 +59,6 @@ namespace Stripe
         public virtual IAsyncEnumerable<File> ListAutoPagingAsync(FileListOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
         {
             return this.ListEntitiesAutoPagingAsync(options, requestOptions, cancellationToken);
-        }
-
-        private RequestOptions SetupRequestOptionsForFilesRequest(RequestOptions requestOptions)
-        {
-            if (requestOptions == null)
-            {
-                requestOptions = new RequestOptions();
-            }
-
-            if (requestOptions.BaseUrl == null)
-            {
-                requestOptions.BaseUrl = this.Client.FilesBase;
-            }
-
-            return requestOptions;
         }
     }
 }

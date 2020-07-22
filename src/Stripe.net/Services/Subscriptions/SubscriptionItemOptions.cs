@@ -5,6 +5,9 @@ namespace Stripe
 
     public class SubscriptionItemOptions : INestedOptions, IHasId, IHasMetadata
     {
+        [JsonProperty("billing_thresholds")]
+        public SubscriptionItemBillingThresholdsOptions BillingThresholds { get; set; }
+
         [JsonProperty("clear_usage")]
         public bool? ClearUsage { get; set; }
 

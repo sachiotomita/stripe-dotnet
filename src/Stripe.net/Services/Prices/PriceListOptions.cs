@@ -18,7 +18,7 @@ namespace Stripe
         public string Product { get; set; }
 
         [JsonProperty("recurring")]
-        public PriceRecurringListOptions Recurring { get; set; }
+        public PriceRecurringOptions Recurring { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }

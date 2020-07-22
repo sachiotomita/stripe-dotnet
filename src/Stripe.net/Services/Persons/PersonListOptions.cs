@@ -5,6 +5,6 @@ namespace Stripe
     public class PersonListOptions : ListOptions
     {
         [JsonProperty("relationship")]
-        public PersonRelationshipListOptions Relationship { get; set; }
+        public PersonRelationshipOptions Relationship { get; set; }
     }
 }

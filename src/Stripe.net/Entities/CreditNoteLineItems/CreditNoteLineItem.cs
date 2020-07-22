@@ -30,7 +30,7 @@ namespace Stripe
         public long? Quantity { get; set; }
 
         [JsonProperty("tax_amounts")]
-        public List<CreditNoteTaxAmount> TaxAmounts { get; set; }
+        public List<CreditNoteLineItemTaxAmount> TaxAmounts { get; set; }
 
         [JsonProperty("tax_rates")]
         public List<TaxRate> TaxRates { get; set; }

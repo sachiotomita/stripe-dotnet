@@ -16,6 +16,9 @@ namespace Stripe
         [JsonProperty("card_payments")]
         public AccountCapabilitiesCardPaymentsOptions CardPayments { get; set; }
 
+        [JsonProperty("cartes_bancaires_payments")]
+        public AccountCapabilitiesCartesBancairesPaymentsOptions CartesBancairesPayments { get; set; }
+
         [JsonProperty("jcb_payments")]
         public AccountCapabilitiesJcbPaymentsOptions JcbPayments { get; set; }
 

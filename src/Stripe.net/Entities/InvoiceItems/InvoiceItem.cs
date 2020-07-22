@@ -81,7 +81,7 @@ namespace Stripe
         public Dictionary<string, string> Metadata { get; set; }
 
         [JsonProperty("period")]
-        public Period Period { get; set; }
+        public InvoiceItemPeriod Period { get; set; }
 
         [JsonProperty("plan")]
         public Plan Plan { get; set; }
